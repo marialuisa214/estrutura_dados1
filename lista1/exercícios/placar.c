@@ -14,7 +14,7 @@ int main() {
             strcpy(nome1, nome2);
         } else if (nota2 == nota1) {
             for (j = 0; j < strlen(nome1); j++) {
-                if (strcmp(&nome1[i], &nome2[i]) < 0) {
+                if (strcmp(&nome1[j], &nome2[j]) < 0) {
                     strcpy(nome1, nome2);
                     nota1 = nota2;
                     break;
