@@ -1,18 +1,20 @@
 #include <stdio.h>
 
 // função recursiva aqui!
-int maldicao(int n){
+int f91(int n){
     if (n >= 101) {
         return n - 10;
     } else {
-        return maldicao(maldicao(n + 11));
+        return f91(f91(n + 11));
     }
 }
 
 int main() {
     int n;
-    while (scanf("%d", &n) != EOF) {
+    scanf("%d", &n);
+    while ( n != 0) {
         // chama a função, passando n como parametro
-        printf("%d\n", maldicao(n));
+        printf("f91(%d) = %d\n", n, f91(n));
+        scanf("%d", &n);
     }
 }
