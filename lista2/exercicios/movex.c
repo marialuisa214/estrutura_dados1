@@ -20,7 +20,6 @@ int valorX(char *palavra) {
 }
 int main() {
     char string[100];
-
     scanf("%s", string);
     valorX(string);
 }
