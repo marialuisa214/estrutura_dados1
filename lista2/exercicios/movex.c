@@ -8,18 +8,19 @@
 int valorX(char *palavra) {
     if (*palavra == '\0') {
         return 0;
-    } else if (palavra == 'x') {
-        valorX(++palavra); // palavra + 1 -> pegando o prox elemento da string
+    } else if (*palavra == 'x') {
+        valorX(palavra + 1); // palavra + 1 -> pegando o prox elemento da string
         printf("%c", *palavra);
-        return 0;  
+        return 0;
     } else {
         printf("%c", *palavra);
-        valorX(++palavra);
+        valorX(palavra + 1);
         return 0;
     }
 }
 int main() {
-    char string[100];
+    char string[101];
     scanf("%s", string);
     valorX(string);
+    puts("");
 }
